@@ -64,7 +64,9 @@ function App() {
           return (
             <>
           <AddTodo addTodo={addTodo}/>
-          <Todos todos={todos} onDelete={onDelete}/>
+          <ol class="list-group list-group-numbered">
+            <Todos todos={todos} onDelete={onDelete}/>
+          </ol>
           </>
           )
         }}>

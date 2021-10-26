@@ -3,12 +3,16 @@ import React from 'react'
 export const TodoItem = ({todo,onDelete}) => {
     return (
         <>
-        <div className="container">
-            <h4>{todo.title}</h4>
-            <p>{todo.desc}</p>
-            <button className="btn btn-sm btn-danger" onClick={ ()=>{onDelete(todo)}}>Delete</button>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div className="ms-2 me-auto">
+        <div class="fw-bold">{todo.title}</div>
+            {todo.desc}
         </div>
+        <span class="badge btn-danger rounded-pill">
+        <button className="btn btn-sm " onClick={ ()=>{onDelete(todo)}}>Delete</button>
+        </span>
         <hr/>
+        </li>
         </>
     )
 }
